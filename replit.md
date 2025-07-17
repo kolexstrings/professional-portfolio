@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a full-stack web application built as a personal portfolio website for Alex Chen, a blockchain developer. The application showcases a modern React frontend with a Node.js/Express backend, designed to present professional information, skills, projects, and contact details in an engaging format.
+This is a full-stack web application built as a personal portfolio website for Alex Chen, a blockchain developer. The application showcases a modern React frontend with a Node.js/Express backend, designed to present professional information, skills, projects, and contact details in a captivating, futuristic Web3-themed format with advanced animations and visual effects.
 
 ## User Preferences
 

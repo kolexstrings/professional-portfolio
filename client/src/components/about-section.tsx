@@ -2,10 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-muted/50">
+    <section id="about" className="py-20 bg-muted/50 matrix-bg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold mb-4 text-animated-gradient">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Passionate about pushing the boundaries of Web3 technology and creating seamless decentralized experiences
           </p>
@@ -34,15 +34,15 @@ export function AboutSection() {
             </p>
             
             <div className="grid grid-cols-2 gap-6 pt-6">
-              <Card>
+              <Card className="hover:scale-105 transition-all duration-300 glow-blue">
                 <CardContent className="p-4 text-center">
-                  <div className="text-3xl font-bold text-primary">4+</div>
+                  <div className="text-3xl font-bold text-animated-gradient">4+</div>
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="hover:scale-105 transition-all duration-300 glow-purple">
                 <CardContent className="p-4 text-center">
-                  <div className="text-3xl font-bold text-[hsl(261,83%,58%)]">50+</div>
+                  <div className="text-3xl font-bold text-animated-gradient">50+</div>
                   <div className="text-sm text-muted-foreground">Projects Completed</div>
                 </CardContent>
               </Card>

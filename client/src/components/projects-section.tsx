@@ -40,10 +40,10 @@ export function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-muted/50">
+    <section id="projects" className="py-20 bg-muted/50 matrix-bg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold mb-4 text-animated-gradient">Featured Projects</h2>
           <p className="text-xl text-muted-foreground">
             Innovative Web3 solutions that showcase technical expertise and user-centric design
           </p>
@@ -51,18 +51,19 @@ export function ProjectsSection() {
         
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-300">
-              <div className="overflow-hidden">
+            <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] glow-purple network-lines">
+              <div className="overflow-hidden relative">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
+                <div className="absolute inset-0 bg-web3-gradient opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
               <CardContent className="p-8">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-2xl font-semibold">{project.title}</h3>
-                  <Badge variant="secondary" className={project.statusColor}>
+                  <h3 className="text-2xl font-semibold text-animated-gradient">{project.title}</h3>
+                  <Badge variant="secondary" className={`${project.statusColor} pulse-glow`}>
                     {project.status}
                   </Badge>
                 </div>
@@ -71,7 +72,7 @@ export function ProjectsSection() {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="outline" className="text-xs">
+                    <Badge key={tagIndex} variant="outline" className="text-xs hover:bg-cyber-gradient hover:text-white hover:border-transparent transition-all duration-300">
                       {tag}
                     </Badge>
                   ))}
@@ -80,7 +81,7 @@ export function ProjectsSection() {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-primary hover:text-primary/90 p-0"
+                    className="text-primary hover:text-primary/90 p-0 hover:scale-110 transition-all duration-300"
                     disabled={project.status === "In Development"}
                   >
                     <ExternalLink className="mr-2 h-4 w-4" />
@@ -89,7 +90,7 @@ export function ProjectsSection() {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-muted-foreground hover:text-foreground p-0"
+                    className="text-muted-foreground hover:text-blockchain-green p-0 hover:scale-110 transition-all duration-300"
                   >
                     <Github className="mr-2 h-4 w-4" />
                     GitHub

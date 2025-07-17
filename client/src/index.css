@@ -25,6 +25,9 @@
   --radius: 0.5rem;
   --blockchain-green: hsl(162, 100%, 50%);
   --tech-purple: hsl(261, 83%, 58%);
+  --cyber-blue: hsl(195, 100%, 50%);
+  --neon-pink: hsl(322, 100%, 65%);
+  --electric-yellow: hsl(48, 100%, 50%);
 }
 
 .dark {
@@ -49,6 +52,9 @@
   --ring: hsl(217, 91%, 60%);
   --blockchain-green: hsl(162, 100%, 50%);
   --tech-purple: hsl(261, 83%, 58%);
+  --cyber-blue: hsl(195, 100%, 50%);
+  --neon-pink: hsl(322, 100%, 65%);
+  --electric-yellow: hsl(48, 100%, 50%);
 }
 
 @layer base {
@@ -89,5 +95,171 @@
   
   .border-tech-purple {
     border-color: var(--tech-purple);
+  }
+
+  .cyber-blue {
+    color: var(--cyber-blue);
+  }
+  
+  .neon-pink {
+    color: var(--neon-pink);
+  }
+  
+  .electric-yellow {
+    color: var(--electric-yellow);
+  }
+
+  /* Futuristic gradient backgrounds */
+  .bg-web3-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--tech-purple) 50%, var(--blockchain-green) 100%);
+  }
+  
+  .bg-cyber-gradient {
+    background: linear-gradient(135deg, var(--cyber-blue) 0%, var(--neon-pink) 50%, var(--electric-yellow) 100%);
+  }
+  
+  .bg-matrix-gradient {
+    background: linear-gradient(135deg, 
+      hsl(162, 100%, 30%) 0%, 
+      hsl(162, 100%, 50%) 25%, 
+      hsl(261, 83%, 58%) 50%, 
+      hsl(195, 100%, 50%) 75%, 
+      hsl(322, 100%, 65%) 100%);
+  }
+
+  /* Animated gradients */
+  .bg-animated-gradient {
+    background: linear-gradient(-45deg, var(--primary), var(--tech-purple), var(--blockchain-green), var(--cyber-blue));
+    background-size: 400% 400%;
+    animation: gradient-shift 6s ease infinite;
+  }
+
+  .text-animated-gradient {
+    background: linear-gradient(-45deg, var(--primary), var(--tech-purple), var(--blockchain-green), var(--cyber-blue));
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 6s ease infinite;
+  }
+
+  /* Glow effects */
+  .glow-blue {
+    box-shadow: 0 0 20px hsla(195, 100%, 50%, 0.3), 0 0 40px hsla(195, 100%, 50%, 0.2);
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 20px hsla(261, 83%, 58%, 0.3), 0 0 40px hsla(261, 83%, 58%, 0.2);
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 20px hsla(162, 100%, 50%, 0.3), 0 0 40px hsla(162, 100%, 50%, 0.2);
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .float-delayed {
+    animation: float 3s ease-in-out infinite 1.5s;
+  }
+
+  /* Pulse glow */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Matrix rain effect */
+  .matrix-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .matrix-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsla(162, 100%, 50%, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsla(261, 83%, 58%, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsla(195, 100%, 50%, 0.05) 0%, transparent 50%);
+    animation: matrix-float 20s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* Blockchain network lines */
+  .network-lines {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .network-lines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(90deg, transparent 95%, hsla(162, 100%, 50%, 0.1) 100%),
+      linear-gradient(0deg, transparent 95%, hsla(261, 83%, 58%, 0.1) 100%);
+    background-size: 50px 50px;
+    animation: network-pulse 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 20px hsla(162, 100%, 50%, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 30px hsla(162, 100%, 50%, 0.6), 0 0 60px hsla(162, 100%, 50%, 0.3);
+  }
+}
+
+@keyframes matrix-float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg);
+  }
+}
+
+@keyframes network-pulse {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
   }
 }

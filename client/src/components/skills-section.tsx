@@ -31,10 +31,10 @@ export function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 network-lines">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Technical Expertise</h2>
+          <h2 className="text-4xl font-bold mb-4 text-animated-gradient">Technical Expertise</h2>
           <p className="text-xl text-muted-foreground">
             Comprehensive skill set spanning blockchain development and modern web technologies
           </p>
@@ -42,15 +42,15 @@ export function SkillsSection() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-8">
-                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 ${category.color}`}>
+            <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105 glow-purple group">
+              <CardContent className="p-8 network-lines">
+                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 ${category.color} float pulse-glow`}>
                   <span className="text-xl">{category.icon}</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-animated-gradient">{category.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
-                    <Badge key={skillIndex} variant="secondary" className="text-xs">
+                    <Badge key={skillIndex} variant="secondary" className="text-xs hover:bg-web3-gradient hover:text-white transition-all duration-300">
                       {skill}
                     </Badge>
                   ))}
@@ -60,14 +60,14 @@ export function SkillsSection() {
           ))}
         </div>
         
-        <div className="mt-12 p-8 bg-gradient-to-r from-primary to-[hsl(261,83%,58%)] rounded-2xl">
+        <div className="mt-12 p-8 bg-animated-gradient rounded-2xl glow-green network-lines">
           <h3 className="text-2xl font-semibold text-white mb-6 text-center">Specialized Technologies</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {specializedTech.map((tech, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl mb-2">{tech.icon}</div>
-                <h4 className="font-semibold text-white">{tech.title}</h4>
-                <p className="text-blue-100 text-sm">{tech.subtitle}</p>
+              <div key={index} className="text-center group hover:scale-110 transition-all duration-300">
+                <div className="text-3xl mb-2 float group-hover:text-electric-yellow transition-colors duration-300">{tech.icon}</div>
+                <h4 className="font-semibold text-white group-hover:text-cyber-blue transition-colors duration-300">{tech.title}</h4>
+                <p className="text-blue-100 text-sm group-hover:text-neon-pink transition-colors duration-300">{tech.subtitle}</p>
               </div>
             ))}
           </div>

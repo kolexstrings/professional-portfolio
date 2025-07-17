@@ -27,48 +27,48 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 network-lines">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl font-bold mb-4">Let's Build Something Amazing</h2>
+        <h2 className="text-4xl font-bold mb-4 text-animated-gradient">Let's Build Something Amazing</h2>
         <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
           Ready to bring your Web3 vision to life? Let's discuss your next blockchain project.
         </p>
         
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="group">
-            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform float pulse-glow glow-blue">
               <Mail className="text-primary text-2xl h-8 w-8" />
             </div>
-            <h3 className="font-semibold mb-2">Email</h3>
-            <a href="mailto:alex@example.com" className="text-muted-foreground hover:text-primary">
+            <h3 className="font-semibold mb-2 text-animated-gradient">Email</h3>
+            <a href="mailto:alex@example.com" className="text-muted-foreground hover:text-primary transition-colors duration-300">
               alex@example.com
             </a>
           </div>
           
           <div className="group">
-            <div className="w-16 h-16 bg-[hsl(261,83%,58%)]/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 bg-[hsl(261,83%,58%)]/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform float-delayed pulse-glow glow-purple">
               <Linkedin className="text-[hsl(261,83%,58%)] text-2xl h-8 w-8" />
             </div>
-            <h3 className="font-semibold mb-2">LinkedIn</h3>
-            <a href="#" className="text-muted-foreground hover:text-primary">
+            <h3 className="font-semibold mb-2 text-animated-gradient">LinkedIn</h3>
+            <a href="#" className="text-muted-foreground hover:text-tech-purple transition-colors duration-300">
               linkedin.com/in/alexchen
             </a>
           </div>
           
           <div className="group">
-            <div className="w-16 h-16 bg-[hsl(162,100%,50%)]/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 bg-[hsl(162,100%,50%)]/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform float pulse-glow glow-green">
               <Github className="text-[hsl(162,100%,50%)] text-2xl h-8 w-8" />
             </div>
-            <h3 className="font-semibold mb-2">GitHub</h3>
-            <a href="#" className="text-muted-foreground hover:text-primary">
+            <h3 className="font-semibold mb-2 text-animated-gradient">GitHub</h3>
+            <a href="#" className="text-muted-foreground hover:text-blockchain-green transition-colors duration-300">
               github.com/alexchen
             </a>
           </div>
         </div>
         
-        <Card className="shadow-xl">
+        <Card className="shadow-xl glow-purple network-lines">
           <CardContent className="p-8">
-            <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-animated-gradient">Send Me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <Input
@@ -105,7 +105,7 @@ export function ContactSection() {
               />
               <Button
                 type="submit"
-                className="w-full md:w-auto bg-gradient-to-r from-primary to-[hsl(261,83%,58%)] hover:from-primary/90 hover:to-[hsl(261,83%,58%)]/90 text-white"
+                className="w-full md:w-auto bg-web3-gradient hover:opacity-90 text-white glow-blue transition-all duration-300 hover:scale-105"
               >
                 Send Message
                 <Send className="ml-2 h-4 w-4" />
