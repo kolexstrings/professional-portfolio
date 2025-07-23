@@ -6,10 +6,14 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <span className="text-2xl font-bold text-primary">Alex Chen</span>
-            <p className="text-muted-foreground mt-1">Blockchain Developer & Web3 Architect</p>
+            <span className="text-2xl font-bold text-primary">
+              Kolade Olukoya
+            </span>
+            <p className="text-muted-foreground mt-1">
+              Blockchain Developer & Architect
+            </p>
           </div>
-          
+
           <div className="flex space-x-6">
             <a
               href="#"
@@ -37,10 +41,10 @@ export function Footer() {
             </a>
           </div>
         </div>
-        
+
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground">
-            © 2024 Alex Chen. Built with passion for Web3 innovation.
+            © 2025 Kolade Olukoya. Built with passion for Web3 innovation.
           </p>
         </div>
       </div>

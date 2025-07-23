@@ -5,12 +5,15 @@ export function AboutSection() {
     <section id="about" className="py-20 bg-muted/50 matrix-bg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-animated-gradient">About Me</h2>
+          <h2 className="text-4xl font-bold mb-4 text-animated-gradient">
+            About Me
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Passionate about pushing the boundaries of Web3 technology and creating seamless decentralized experiences
+            Passionate about pushing the boundaries of Web3 technology and
+            creating seamless decentralized experiences
           </p>
         </div>
-        
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <img
@@ -19,31 +22,41 @@ export function AboutSection() {
               className="rounded-2xl shadow-xl w-full h-auto"
             />
           </div>
-          
+
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">Blockchain Innovation & Web3 Expertise</h3>
+            <h3 className="text-2xl font-semibold">
+              Blockchain Innovation & Web3 Expertise
+            </h3>
             <p className="text-muted-foreground leading-relaxed">
-              With over 4 years of hands-on experience in blockchain development, I specialize in architecting 
-              and building sophisticated decentralized applications that bridge the gap between complex Web3 
-              technology and intuitive user experiences.
+              With over 4 years of hands-on experience in blockchain
+              development, I specialize in architecting and building
+              sophisticated decentralized applications that bridge the gap
+              between complex Web3 technology and intuitive user experiences.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              My expertise spans across EVM-compatible chains and the Internet Computer Protocol (ICP), 
-              with deep knowledge in advanced concepts like ERC-4337 Account Abstraction, gasless transactions, 
-              and cross-chain wallet solutions.
+              My expertise spans across EVM-compatible chains and the Internet
+              Computer Protocol (ICP), with deep knowledge in advanced concepts
+              like ERC-4337 Account Abstraction, gasless transactions, and
+              cross-chain wallet solutions.
             </p>
-            
+
             <div className="grid grid-cols-2 gap-6 pt-6">
               <Card className="hover:scale-105 transition-all duration-300 glow-blue">
                 <CardContent className="p-4 text-center">
-                  <div className="text-3xl font-bold text-animated-gradient">4+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-3xl font-bold text-animated-gradient">
+                    4+
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Years Experience
+                  </div>
                 </CardContent>
               </Card>
               <Card className="hover:scale-105 transition-all duration-300 glow-purple">
                 <CardContent className="p-4 text-center">
-                  <div className="text-3xl font-bold text-animated-gradient">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
+                  <div className="text-3xl font-bold text-animated-gradient">
+                    5+
+                  </div>
+                  <div className="text-sm text-muted-foreground">Chains</div>
                 </CardContent>
               </Card>
             </div>
