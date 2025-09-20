@@ -13,7 +13,6 @@ const nextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       "@": require("path").resolve(__dirname, "app"),
-      "@shared": require("path").resolve(__dirname, "shared"),
     };
     return config;
   },

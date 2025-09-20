@@ -10,19 +10,17 @@ Preferred communication style: Simple, everyday language.
 
 ## System Architecture
 
-### Monorepo Structure
+### Project Structure
 
-The application follows a well-organized monorepo pattern with clear separation of concerns:
+The application follows a modern Next.js architecture:
 
-- `app/` - Next.js frontend application
-- `server/` - Node.js/Express backend
-- `shared/` - Shared schemas and types between frontend and backend
+- `app/` - Next.js application with App Router
+- `components/` - Reusable React components
+- `lib/` - Utility functions and configurations
 
 ### Technology Stack
 
 - **Frontend**: Next.js 14 with TypeScript, React 18
-- **Backend**: Node.js with Express framework
-- **Database**: PostgreSQL with Drizzle ORM
 - **UI Library**: shadcn/ui components with Radix UI primitives
 - **Styling**: Tailwind CSS with custom design system
 - **State Management**: TanStack Query for server state
@@ -39,36 +37,21 @@ The application follows a well-organized monorepo pattern with clear separation 
 - **Dark/light theme support** with theme provider
 - **Single-page application** with smooth scrolling navigation
 
-### Backend Architecture
+### Component Architecture
 
-- **Express.js server** with TypeScript support
-- **Modular route structure** with separation in `/server/routes.ts`
-- **Database abstraction** through storage interface pattern
-- **In-memory storage** for development (easily swappable with database implementation)
-- **Request logging** middleware for API monitoring
-
-### Database Design
-
-- **PostgreSQL** as the primary database (configured via Drizzle)
-- **Type-safe schema** definitions using Drizzle ORM
-- **Migration support** with automated schema management
-- **Zod validation** for request/response schemas
+- **Modular component design** with clear separation of concerns
+- **Reusable UI components** built with shadcn/ui
+- **Custom hooks** for state management and utilities
+- **Theme provider** for dark/light mode support
 
 ## Data Flow
 
-### Client-Server Communication
-
-- **RESTful API** design with `/api` prefix for all backend routes
-- **Type-safe requests** using shared schemas between client and server
-- **React Query** for efficient data fetching, caching, and synchronization
-- **Error handling** with centralized error middleware
-
 ### State Management
 
-- **Server state** managed by TanStack Query
 - **Local component state** using React hooks
 - **Theme state** persisted in localStorage
 - **Form state** handled by React Hook Form with Zod validation
+- **Global state** managed through React Context (Theme Provider)
 
 ## External Dependencies
 
